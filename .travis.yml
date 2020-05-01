@@ -62,8 +62,8 @@ before_script:
 
   - easy_install distribute
   # Instalar folium
-  - sudo pip install --upgrade setuptools
-  - sudo pip install --no-cache-dir folium
+  - sudo pip install python-setuptools
+  - sudo pip install folium
   - cd programs
 
 # Compilamos
