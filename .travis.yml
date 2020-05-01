@@ -62,7 +62,7 @@ before_script:
 
   - easy_install distribute
   # Instalar folium
-  - sudo pip install python-setuptools
+  - sudo pip install setuptools
   - sudo pip install folium
   - cd programs
 
