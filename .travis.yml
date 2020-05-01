@@ -46,6 +46,10 @@ install:
   - sudo apt-get -y install python-all-dev python3-all-dev
   - sudo apt-get install python3-pip
 
+# Instalar folium
+  - sudo pip install --upgrade setuptools
+  - sudo pip install --no-cache-dir folium
+
 # Instalar YARP
 
   - sudo sh -c 'echo "deb http://www.icub.org/ubuntu trusty contrib/science" > /etc/apt/sources.list.d/icub.list'
@@ -53,10 +57,6 @@ install:
   - sudo apt-get update
   - sudo apt-get install yarp
 
-
-# Instalar folium
-  - sudo pip install --upgrade setuptools
-  - sudo pip install folium
 
 # Tareas a ejecutar antes de nuestra prueba
 
