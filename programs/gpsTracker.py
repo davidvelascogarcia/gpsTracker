@@ -43,6 +43,11 @@ print("")
 print("Loading GPS Tracker engine...")
 
 print("")
+print("")
+print("**************************************************************************")
+print("YARP configuration:")
+print("**************************************************************************")
+print("")
 print("Initializing YARP network...")
 
 # Init YARP Network
@@ -80,10 +85,12 @@ print("")
 print("Detecting system and release version...")
 systemPlatform = platform.system()
 systemRelease = platform.release()
-print(" ")
-print("***********************")
+
+print("")
+print("")
+print("**************************************************************************")
 print("Configuration detected:")
-print("***********************")
+print("**************************************************************************")
 print("Platform:")
 print(systemPlatform)
 print("Release:")
@@ -103,6 +110,12 @@ latitude = mapCoordinates[start:end]
 start = mapCoordinates.find('+') + 1
 end = mapCoordinates.find('+', start)
 longitude = mapCoordinates[start:end]
+
+print("")
+print("")
+print("**************************************************************************")
+print("Processing:")
+print("**************************************************************************")
 
 print("Map location: "+latitude+" , "+longitude)
 
@@ -160,3 +173,9 @@ while True:
 print("Closing YARP ports...")
 gpstracker_inputPort.close()
 gpstr_outputPort.close()
+
+print("")
+print("")
+print("**************************************************************************")
+print("Program finished")
+print("**************************************************************************")
