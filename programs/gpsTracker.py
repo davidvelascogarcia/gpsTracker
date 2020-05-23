@@ -37,10 +37,10 @@ print("*************************************************************************
 print("**************************************************************************")
 
 print("")
-print("Starting system...")
+print("Starting system ...")
 
 print("")
-print("Loading GPS Tracker engine...")
+print("Loading GPS Tracker engine ...")
 
 print("")
 print("")
@@ -48,14 +48,14 @@ print("*************************************************************************
 print("YARP configuration:")
 print("**************************************************************************")
 print("")
-print("Initializing YARP network...")
+print("Initializing YARP network ...")
 
 # Init YARP Network
 yarp.Network.init()
 
 
 print("")
-print("Opening data input port with name /gpsTracker/data:i ...")
+print("[INFO] Opening data input port with name /gpsTracker/data:i ...")
 
 # Open input data port
 gpstracker_inputPort = yarp.Port()
@@ -66,7 +66,7 @@ gpstracker_inputPort.open(gpstracker_inputPortName)
 inputBottle=yarp.Bottle()
 
 print("")
-print("Opening data output port with name /gpsTracker/data:o ...")
+print("[INFO] Opening data output port with name /gpsTracker/data:o ...")
 
 # Open output data port
 gpstracker_outputPort = yarp.Port()
@@ -78,11 +78,11 @@ outputBottle=yarp.Bottle()
 
 
 print("")
-print("Initializing gpstracker engine...")
+print("Initializing gpstracker engine ...")
 
 # Get system configuration
 print("")
-print("Detecting system and release version...")
+print("Detecting system and release version ...")
 systemPlatform = platform.system()
 systemRelease = platform.release()
 
@@ -117,11 +117,11 @@ print("*************************************************************************
 print("Processing:")
 print("**************************************************************************")
 
-print("Map location: "+latitude+" , "+longitude)
+print("[INFO] Map location: "+latitude+" , "+longitude)
 
 # Get map
 print("")
-print("Getting location map...")
+print("Getting location map ...")
 locationMap = folium.Map(location=[latitude , longitude])
 
 
@@ -145,7 +145,7 @@ while True:
     end = userCoordinates.find('+', start)
     longitude = userCoordinates[start:end]
 
-    print("User location: "+latitude+" , "+longitude)
+    print("[INFO] User location: "+latitude+" , "+longitude)
 
 
     # Print location in the map
@@ -159,7 +159,7 @@ while True:
 
     # Save map
     locationMap.save('gpstrackerLocationMap.html')
-    print("The user has beed located at "+dateTime)
+    print("[RESULTS] The user has beed located at "+dateTime)
 
     # Open tracking map
     webbrowser.open("gpstrackerLocationMap.html")
